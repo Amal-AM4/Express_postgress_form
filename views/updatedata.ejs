@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Insert</title>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+
+    <h2>Update student details <%= data.name %></h2>
+    <br>
+
+    <div class="container">
+
+        <form id="updateForm" method="POST" action="/update/<%= data.id %>">
+
+            <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" name="name"  id="name" value="<%= data.name %>">
+            </div>
+            <div class="form-group">
+                <label for="">Age</label>
+                <input type="number" name="age"  id="age" value="<%= data.age %>">
+            </div>
+            <div class="form-group">
+                <label for="">Gender</label>
+
+                <% if (data.gender === 'm') { %>
+                    <input type="radio" name="gender"  id="gender" value="m" checked> Male
+                    <input type="radio" name="gender"  id="gender" value="f"> Female
+                <% } else if (data.gender === 'f') { %>
+                    <input type="radio" name="gender"  id="gender" value="m"> Male
+                    <input type="radio" name="gender"  id="gender" value="f" checked> Female
+                <% } else { %>
+                    <input type="radio" name="gender"  id="gender" value="m"> Male
+                    <input type="radio" name="gender"  id="gender" value="f"> Female
+                <% } %>
+            </div>
+            <div class="form-group">
+                <label for="">Place</label>
+                <input type="text" name="place" id="place" value="<%= data.place %>">
+            </div>
+
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+
+    
+</body>
+</html>

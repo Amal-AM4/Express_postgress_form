@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:link,
+a:active,
+a:visited {
+  display: block;
+  border: 1px solid #6B645A;
+  padding: 3px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #6B645A;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #332e26;
+}
+
+.active-back {
+  margin-top: 30px;
+  margin-left: 40px;
+  width: 80px;
+  height: 30px;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 18px;
+  background-color: #E4DBCE;
+  color: #6B645A;
+}
+
+h2 {
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.container h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.container {
+  margin-left: 40px;
+}
+
+.container ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.container ul li {
+  padding-right: 8px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input[type='text'], 
+.form-group input[type='number'] {
+  padding: 4px 8px;
+}
+
+.container button {
+  font-size: 18px;
+  padding: 4px 20px;
+  cursor: pointer;
+  background-color: #91755D;
+  color: #583F3C;
+  border: none;
+  border-radius: 4px;
+  
+}
+
+.table-rx, tr, th, td {
+  border: 2px solid #332e26;
+  border-collapse: collapse;
+  font-size: 104%;
+}
+
+.table-rx th, td {
+  padding: 4px 8px;
+}
+
+.ol-list {
+  margin-top: 20px;
+  margin-left: 60px;
+  margin-bottom: 20px;
+}
+
+.ol-list li {
+  margin-bottom: 10px;
+}
+

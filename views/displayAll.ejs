@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display All record</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+
+    <h2>Peoples Details from database</h2>
+
+    <div class="container">
+        <h3>Table</h3>
+
+        <table class="table-rx">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>GENDER</th>
+                <th>PLACE</th>
+                <th>VIEW</th>
+                <th>EDIT</th>
+                <th>REMOVE</th>
+            </tr>
+
+            <% data.forEach(row => { %>
+                <tr>
+                    <td><%= row.id %></td>
+                    <td><%= row.name %></td>
+                    <td><%= row.age %></td>
+                    <td><% if (row.gender === 'm') { %>
+                        Male
+                        <% } else { %>
+                            Female
+                        <% } %>
+                    </td>
+                    <td><%= row.place %></td>
+                    <td><a href="/singleView/<%= row.id %>">view</a></td>
+                    <td><a href="/updateData/<%= row.id %>">modify</a></td>
+                    <td><a href="/deleteData/<%= row.id %>">delete</a></td>
+                </tr>
+            <% }) %>
+
+        </table>
+        
+    </div>
+
+    <a href="/" class="active-back">Back</a>
+
+</body>
+</html>

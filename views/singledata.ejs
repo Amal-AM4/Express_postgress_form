@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Data</title>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+
+    <div class="container">
+        <h2>Details of <%= data.name %></h2>
+        
+        <ol class="ol-list">
+            <li>Age: <%= data.age %></li>
+            <li>Sex: <% if ( data.gender === 'm') { %>
+                Male
+                <% } else { %>
+                    Female
+            <% } %></li>
+            <li>Place: <%= data.place %></li>
+        </ol>
+
+    </div>
+
+    <a href="/displayAll" class="active-back">Back</a>
+    
+</body>
+</html>
